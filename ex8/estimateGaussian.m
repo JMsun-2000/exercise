@@ -22,6 +22,10 @@ sigma2 = zeros(n, 1);
 %
 
 
+mean_X = sum(X)/m;
+mu = (mean_X)';
+
+sigma2 = (sum((X-mean_X).^2)./m)';
 
 
 
