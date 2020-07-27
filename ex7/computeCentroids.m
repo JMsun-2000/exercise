@@ -27,7 +27,11 @@ centroids = zeros(K, n);
 %
 
 
-
+for i=1:K
+  cur_x_idx = (idx==i);
+  c_m=sum(cur_x_idx);
+  centroids(i, :) = sum(X.*cur_x_idx)./c_m;
+end
 
 
 
